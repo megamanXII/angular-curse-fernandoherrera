@@ -1,0 +1,13 @@
+<h1>Personajes de Saint Seiya</h1>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <saintseiya-list [characterList]="characters"></saintseiya-list>
+    </div>
+    
+    <div class="col">
+        <saintseiya-characters (onNewCharacter)="onNewCharacter($event)"></saintseiya-characters>
+    </div>
+
+</div>
