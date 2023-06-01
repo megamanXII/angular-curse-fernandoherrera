@@ -3,11 +3,12 @@
 
 <div class="row">
     <div class="col">
-        <saintseiya-list [characterList]="characters"></saintseiya-list>
+        <saintseiya-list [characterList]="SaintSeiyaService.characters"
+                            (onDelete)="SaintSeiyaService.deleteCharacterById($event)"></saintseiya-list>
     </div>
     
     <div class="col">
-        <saintseiya-characters (onNewCharacter)="onNewCharacter($event)"></saintseiya-characters>
+        <saintseiya-characters (onNewCharacter)="SaintSeiyaService.onNewCharacter($event)"></saintseiya-characters>
     </div>
 
 </div>

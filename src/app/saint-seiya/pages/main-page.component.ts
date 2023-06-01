@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Character } from '../interfaces/character.interface';
+import { SaintSeiyaService } from '../services/saint-seiya-service.ts.service';
 
 @Component({
     selector: 'app-saintseiya-main-page',
@@ -7,22 +8,7 @@ import { Character } from '../interfaces/character.interface';
 })
 
 export class MainPageComponent {
-    public characters: Character[] = [{
-        name: "Shyru",
-        power: 2500
-    },
-    {
-        name: "Ikki",
-        power: 1450
-    },
-    {
-        name: "Shun",
-        power: 345
+    constructor(public SaintSeiyaService: SaintSeiyaService) {
+        
     }
-]
-
-onNewCharacter(character: Character): void{
-    console.log('Main Page', character);
-    this.characters.push(character);
-}
 }
